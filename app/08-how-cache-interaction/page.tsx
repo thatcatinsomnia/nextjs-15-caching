@@ -1,6 +1,7 @@
 import Heading from "#/components/Heading";
 import Title from "#/components/Title";
 import Link from '#/components/Link';
+import Code from '#/components/Code';
 
 import { List, ListItem } from "#/components/List";
 
@@ -22,7 +23,7 @@ export default function Page() {
             <section>
                 <Heading>Data Cache 和 Client-side Router Cache Interaction</Heading>
                 <List>
-                    <ListItem>要立刻使 Data Cache 和 Router Cache 失效，你可以在 Server Action 中使用 revalidatePath 或是 RevalidateTag</ListItem>
+                    <ListItem>要立刻使 Data Cache 和 Router Cache 失效，你可以在 Server Action 中使用 <Code>revalidatePath</Code> 或是 <Code>RevalidateTag</Code></ListItem>
                     <ListItem>在 Route Handler 中重新驗證 Data Cache 並不會立刻使 Router Cache 失效。</ListItem>
                 </List>
             </section>

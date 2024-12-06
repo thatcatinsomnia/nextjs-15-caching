@@ -1,7 +1,7 @@
 import { fetchUsers } from "#/helpers/fetchUsers";
 import Boundary from "#/components/Boundary";
 
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 // export const revalidate = 10;
 // export const fetchCache = 'default-no-store';
 

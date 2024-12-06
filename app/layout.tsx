@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import HelperMenu from "./HelperMenu";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -30,6 +31,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} mx-auto px-6 pb-12 max-w-3xl bg-[#1f1f29] text-white antialiased`}
       >
         {children}
+
+        <HelperMenu />
       </body>
     </html>
   );

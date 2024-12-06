@@ -6,6 +6,10 @@ const examples = [
         href: '/examples/full-route-cache-with-dynamic-api',
     },
     {
+        title: 'full route cache with invalidate tag',
+        href: '/examples/full-route-cache-with-invalidate-tag',
+    },
+    {
         title: 'full route cache with child',
         href: '/examples/full-route-cache-with-child',
     },
@@ -24,9 +28,9 @@ export default function ExamplesPage() {
         <div>
             <h2 className="py-8 text-2xl font-bold text-center">Examples</h2>
 
-            <section className="flex flex-col gap-4 text-center">
+            <section className="flex flex-col gap-4 items-center">
                 {examples.map((example) => (
-                    <Link key={example.href} href={example.href} target="_blank" className="underline text-blue-500">
+                    <Link key={example.href} href={example.href} target="_blank" className="inline-block underline text-blue-500">
                         {example.title}
                     </Link>
                 ))}

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:memory": "next build --experimental-debug-memory-usage",
     "start": "next start",
     "lint": "next lint"
   },

@@ -21,7 +21,7 @@ export default function FullRouteCache() {
                   <ListItem>Static Site Generation</ListItem>
                   <ListItem>Static Rendering</ListItem>
               </List>
-              <p className="mt-4">這幾個術語經常被交換使用，但是指的都是同一件事: 在 build time，rendering 並且對 routes 進行 cache 的過程。</p>
+              <p className="mt-4">這幾個術語經常被交換使用，但是指的都是同一件事: 在 build 期間，進行 rendering 並對 routes 進行 cache。</p>
             </section>
 
             <section>
@@ -31,21 +31,21 @@ export default function FullRouteCache() {
 
             <section>
                 <Heading>1. React Rendering on the Server</Heading>
-                <p>在 server 端，Next.js 使用 React&apos;s API 進行 rendering。rendering 工作會被分組: individual routes segments 和 Suspense boundaries。</p>
+                <p>在 server ，Next.js 使用 React&apos;s API 進行 rendering。rendering 工作會被分組: individual routes segments 和 Suspense boundaries。</p>
 
-                <p>每種 chunk 的 render 步驟有兩個:</p>
+                <p>每種 chunk 的 render 有兩個步驟:</p>
 
                 <List type="ordered">
                     <ListItem>React 將 Server Component renders 成一種優化過的特殊格式，方便用於 streaming，叫做 <Bold>React Server Component Payload</Bold>。</ListItem>
                     <ListItem>Next.js 使用 React Server Component Payload 和 Client Component Javascript 指令在 server 端 render HTML。</ListItem>
                 </List>
 
-                <p className="mt-4">這表示當每當 work 完成時我們可以透過 stream 的方式回傳 response。</p>
+                <p className="mt-4">這表示我們可以透過 stream 的方式回傳 response。</p>
             </section>
 
             <section>
                 <Heading>2. Next.js Caching on the Server (Full Route Cache)</Heading>
-                <p className="mb-4">Next.js 預設行為會在 server 端對 routes rendered 結果(React Server Component Payload 和 HTML)進行 cache。會用在 build time 的 statically rendered 和重新驗證。</p>
+                <p className="mb-4">Next.js 預設行為會在 server 端對 routes rendered 結果(React Server Component Payload 和 HTML)進行 cache。這些 cached 的結果會用在 build 期間靜態 render 和重新驗證。</p>
                 <Image 
                     src={fullRouteCacheUrl}
                     alt="full route cache"
